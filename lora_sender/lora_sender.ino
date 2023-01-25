@@ -64,14 +64,16 @@ void loop(){
 
   lcd.setCursor(0, 0);
   lcd.print("Do am: ");
-  lcd.println(h);
+  lcd.print(h);
+  lcd.println(" %  ");
   lcd.setCursor(0, 1);
   lcd.print("Nhiet do: ");
-  lcd.println(t);
+  lcd.print(t);
+  lcd.println("C");
   
   Serial.print("Do am: ");
   Serial.println(h);
-  Serial.print("Nhiet do: ");
+  Serial.print(" Nhiet do: ");
   Serial.println(t);
   
   counter++;
