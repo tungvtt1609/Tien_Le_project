@@ -57,10 +57,12 @@ void loop(){
   Serial.println(counter);
 
   lora.print("Do am: ");
-  lora.println(h);
+  lora.print(h);
+  lora.println(" %  ");
   lora.print("c");
   lora.print("Nhiet do: ");
-  lora.println(t);
+  lora.print(t);
+  lora.println("C");
 
   lcd.setCursor(0, 0);
   lcd.print("Do am: ");
