@@ -56,6 +56,14 @@ void loop(){
   Serial.print("Sending packet: ");
   Serial.println(counter);
 
+  // String MyMessage = "";
+  // MyMessage = MyMessage + String(h) + "," + String(t);
+
+  // lora.beginPacket();
+  // lora.print(MyMessage);
+  // lora.endPacket();
+  // delay(100);
+
   lora.print("Do am: ");
   lora.print(h);
   lora.println(" %  ");
