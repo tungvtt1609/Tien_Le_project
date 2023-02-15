@@ -12,6 +12,9 @@ const int D5 = 4;
 const int D6 = 3;
 const int D7 = 2;
 
+int led = 13;
+int spk = 7;
+
 //String input ="";
 String hum, tem;
 byte temp;
@@ -27,54 +30,11 @@ void setup() {
   lcd.begin(16, 2);
   while (!Serial);
   Serial.println("LoRa Receiver");
-//  if (!LoRa.begin(433E6)) {
-//    Serial.println("Starting LoRa failed!");
-//    while (1);
-//  }
-}
 
-//void loop() {
-//  // put your main code here, to run repeatedly:
-//     Serial.println("Received packet");
-//    if(lora.available()){
-//      String input = lora.readString();
-//      Serial.print(input); 
-//      lcd.print(input); 
-//    }
-//    for(int i = 0; i < input.length(); i++){
-//      if(input.charAt(i) == 'c'){
-//        temp = i;  //tìm vị trí chữ c
-//      }
-//    }
-//
-//    hum = input;
-//    tem = input;
-//
-//    hum.remove(temp);
-//    tem.remove(0, temp + 1);
-//    val1 = hum.toInt();
-//    val2 = tem.toInt();
-//    Serial.print("Humidity: ");
-//    Serial.println(val1);
-//    Serial.print("Temperature: ");
-//    Serial.println(val2);
-//    lcd.setCursor(0, 1);
-//    lcd.print("Do am: ");
-//    lcd.println(val1);
-//
-//    lcd.print("Nhiet do: ");
-//    lcd.println(val2);
-//    delay(5000);
-  
-//}
 
 void loop(){
   while(lora.available()>1) 
   {
-//      char incoming = lora.read();
-//      Serial.print(input); 
-//      lcd.setCursor(0, 1);
-//      lcd.print(input);
     char incoming = (char)lora.read();
     if (incoming == 'c')
     {

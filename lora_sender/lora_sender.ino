@@ -7,7 +7,7 @@
 #define TX 9
 #define RX 10
 const int DHTPIN = 8;
-const int DHTTYPE = DHT22;
+const int DHTTYPE = DHT11;
 int counter = 0;
 int led = 13;
 int spk = 7;
