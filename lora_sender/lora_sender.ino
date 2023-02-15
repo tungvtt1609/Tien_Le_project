@@ -38,9 +38,9 @@ void setup(){
 
 void loop(){
   float h = dht.readHumidity();
-  float t = dht.readTemperature();
+  float t = dht.readTemperature();   // t là nhiệt độ, h là độ ẩm
 
-  if(t > 40){
+  if((t > 40) || (h > 90)){      //Chỗ này thay đổi nhiệt độ
     digitalWrite(led, HIGH);
     delay(1000);
     digitalWrite(spk, HIGH);
